@@ -6,6 +6,7 @@ public class Main {
         User user1 = new User("User 1");
         user1.start();
 
+
         User user2 = new User("User 2");
         user2.start();
 
