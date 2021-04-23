@@ -1,6 +1,6 @@
 package com.threading;
 
-public class User extends Thread {
+public class User implements Runnable {
 
     private String value;
 
@@ -8,14 +8,15 @@ public class User extends Thread {
         this.value = value;
     }
 
-    @Override
-    public void run() {
-        this.print();
-    }
+
 
     public void print(){
         for(int i=0; i<5; i++){
             System.out.println(value);
         }
+    }
+
+    public void run() {
+        this.print();
     }
 }
