@@ -1,14 +1,14 @@
 package com.threading;
 
-public class User implements Runnable {
-
+public class Person implements Runnable {
+    
     private Syncronized syncronized;
 
-    public User(Syncronized syncronized) {
+    public Person(Syncronized syncronized) {
         this.syncronized = syncronized;
     }
 
     public void run() {
-        this.syncronized.print("User");
+        this.syncronized.print("Person");
     }
 }
