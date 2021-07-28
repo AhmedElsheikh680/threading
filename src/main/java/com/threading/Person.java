@@ -1,7 +1,7 @@
 package com.threading;
 
 public class Person implements Runnable {
-    
+
     private Syncronized syncronized;
 
     public Person(Syncronized syncronized) {
