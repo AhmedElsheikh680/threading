@@ -13,6 +13,11 @@ public class User implements Runnable{
     public void print(){
         for(int i=0; i<5; i++){
             System.out.println(value);
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
