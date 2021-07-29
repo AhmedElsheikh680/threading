@@ -2,6 +2,18 @@ package com.threading.revision;
 
 public class User implements Runnable{
 
+
+    public void run() {
+        System.out.println("Run=====================");
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Exit====================");
+    }
+}
+/*
     private RenntrantLock renntrantLock;
 
     public User(RenntrantLock renntrantLock) {
@@ -11,7 +23,7 @@ public class User implements Runnable{
     public void run() {
         this.renntrantLock.print("User");
     }
-}
+ */
 /*
     private Syncronized syncronized;
 
