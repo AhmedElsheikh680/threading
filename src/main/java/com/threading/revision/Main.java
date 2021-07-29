@@ -3,6 +3,18 @@ package com.threading.revision;
 public class Main {
     public static void main(String[] args) {
 
+        RenntrantLock r = new RenntrantLock();
+        User user = new User(r);
+        Thread t1 = new Thread(user);
+        t1.start();
+
+        Person person = new Person(r);
+        Thread t2 = new Thread(person);
+        t2.start();
+    }
+}
+/*
+
         Syncronized syncronized = new Syncronized();
         User user1 = new User(syncronized);
         Thread t1 = new Thread(user1);
@@ -11,9 +23,7 @@ public class Main {
         Person person = new Person(syncronized);
         Thread t2 = new Thread(person);
         t2.start();
-
-    }
-}
+ */
 
 /*
         User user1 = new User("User 1");

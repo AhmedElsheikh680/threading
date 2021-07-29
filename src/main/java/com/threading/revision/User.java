@@ -2,6 +2,17 @@ package com.threading.revision;
 
 public class User implements Runnable{
 
+    private RenntrantLock renntrantLock;
+
+    public User(RenntrantLock renntrantLock) {
+        this.renntrantLock = renntrantLock;
+    }
+
+    public void run() {
+        this.renntrantLock.print("User");
+    }
+}
+/*
     private Syncronized syncronized;
 
     public User(Syncronized syncronized) {
@@ -10,9 +21,9 @@ public class User implements Runnable{
 
 
     public void run() {
-        this.syncronized.print("User");
+        this..print("User");
     }
-}
+ */
 
 /*
 
