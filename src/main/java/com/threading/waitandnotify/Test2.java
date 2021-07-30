@@ -6,6 +6,33 @@ public class Test2 {
         Thread t1 = new Thread(new Runnable() {
             @Override
             public void run() {
+                try {
+                    student.addUser();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    student.removeUser();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        t1.start();
+        t2.start();
+
+    }
+}
+/*
+        Student student = new Student();
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
                 student.setName("Ahmed");
             }
         });
@@ -19,4 +46,4 @@ public class Test2 {
         t2.start();
         t1.start();
     }
-}
+ */
