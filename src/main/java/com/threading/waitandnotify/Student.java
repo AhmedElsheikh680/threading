@@ -5,6 +5,10 @@ import java.util.List;
 
 public class Student {
 
+
+
+}
+/*
     private List<String> users = new ArrayList<>();
     private int counter=0;
 
@@ -34,8 +38,7 @@ public class Student {
             Thread.sleep(500);
         }
     }
-
-}
+ */
 /*
 
     private String name;
